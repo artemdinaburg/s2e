@@ -51,7 +51,7 @@ def _get_debian_version(version_string):
     version = int(version_string)
 
     if version >= 8:
-        return 'x86_64-linux-gnu-debian8'
+        return 'x86_64-linux-gnu-ubuntu-18.04'
     else:
         return None
 
@@ -79,7 +79,7 @@ def _get_ubuntu_version(version_string):
 
 def main():
     """The main function."""
-    name = distro.name()
+    name = distro.id()
     version = distro.version()
 
     clang_ver_to_download = None
